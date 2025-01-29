@@ -70,9 +70,11 @@ router.post(
     if (bio) profileFields.bio = bio;
     if (status) profileFields.status = status;
     if (githubusername) profileFields.githubusername = githubusername;
-    if (skills) {
-      profileFields.skills = skills.split(',').map((skill) => skill.trim());
-    }
+    profileFields.skills = Array.isArray(skills)
+      ? skills.map((skill) => skill.trim())
+      : typeof skills === 'string'
+      ? skills.split(',').map((skill) => skill.trim())
+      : [];
 
     // Build social object
     profileFields.social = {};
@@ -321,14 +323,14 @@ router.get('/github/:username', (req, res) => {
     };
 
     request(options, (error, response, body) => {
-      if(error) console.error(error)
+      if (error) console.error(error);
 
-      if(response.statusCode !== 200) {
-        return res.status(404).json({ msg: 'No Github profile found' })
+      if (response.statusCode !== 200) {
+        return res.status(404).json({ msg: 'No Github profile found' });
       }
 
       res.json(JSON.parse(body));
-    })
+    });
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
