@@ -1,7 +1,6 @@
 {
   "mongoURI": "mongodb+srv://bebra:bebra@devconnector.n94yz.mongodb.net/?retryWrites=true&w=majority&appName=DevConnector",
   "jwtSecret": "mysecrettoken",
-  "githubClientId": "Ov23liLZpHKEZvEdoQnH",
-  "githubSecret": "99ce40e358280a315be128519afdf455d518a2a1"
+  "githubToken": "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"
 }
 

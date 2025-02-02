@@ -27,8 +27,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     }
   };
 
-  if(isAuthenticated) {
-    return <Navigate to="/dashboard"/>
+  if (isAuthenticated) {
+    return <Navigate to="/dashboard" />;
   }
 
   return (
@@ -97,8 +97,8 @@ Register.propTypes = {
   isAuthenticated: PropTypes.bool,
 };
 
-const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated
-})
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+});
 
 export default connect(mapStateToProps, { setAlert, register })(Register);
