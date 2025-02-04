@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@testing-library/react": "^16.2.0",
+    "axios": "^1.7.9",
     "bcryptjs": "^2.4.3",
     "config": "^3.3.12",
     "express": "^4.21.2",

@@ -64,6 +64,7 @@ const CreateProfile = ({ createProfile }) => {
             <option value="0">* Select Professional Status</option>
             <option value="Developer">Developer</option>
             <option value="Junior Developer">Junior Developer</option>
+            <option value="Middle Developer">Middle Developer</option>
             <option value="Senior Developer">Senior Developer</option>
             <option value="Manager">Manager</option>
             <option value="Student or Learning">Student or Learning</option>
